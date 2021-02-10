@@ -1,0 +1,321 @@
+:root {
+  --color-primary: #333;
+  --color-secondary: #ff6961;
+}
+html {
+  margin: 0;
+  font-size: 62.5%;
+  font-family: "Gill Sans MT";
+}
+body {
+  margin: 0;
+}
+
+/* typography */
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+h1 {
+  font-size: 6.4rem;
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+.highlight {
+  color: var(--color-secondary);
+}
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+/* Button */
+
+.btn {
+  border-radius: 5px;
+  outline: 0;
+  border: 0;
+  color: white;
+  font-size: 1.6rem;
+  transition: background 0.3s;
+  padding: 1rem 3rem;
+}
+.btn--primary {
+  background: var(--color-secondary);
+}
+.btn--secondary {
+  background: var(--color-primary);
+  width: 100%;
+}
+.btn:hover {
+  background: #94574a;
+}
+/*Icon*/
+.icon-container {
+  background: var(--color-secondary);
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* List */
+
+.list {
+  color: rgb(0, 0, 0);
+  list-style: none;
+  font-size: 1.6rem;
+}
+.list--link {
+  text-decoration: none;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+.list--link:hover {
+  background: var(--color-secondary);
+}
+/* Nav Bar */
+
+.nav {
+  position: fixed;
+  width: 100%;
+  margin: 0;
+  background: var(--color-primary);
+  text-align: center;
+  padding: 0.5rem;
+}
+.nav .far {
+  font-size: 2.4rem;
+  color: var(--color-secondary);
+}
+
+.nav--logo {
+  font-size: 2.4rem;
+  margin: 2rem;
+  color: #ffffff;
+  text-align: center;
+}
+.nav--items .list {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+/* hero */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/img/showcase.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  padding: 1.5rem;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.hero--heading,
+.hero--content {
+  color: #ffff;
+}
+.hero--heading {
+  margin: 0;
+  line-height: 1;
+  font-weight: 650;
+}
+.hero--content {
+  font-size: 2.1rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+/* What-block  */
+.what--background {
+  background: #f3f3f3;
+}
+.what--block {
+  height: 75vh;
+  padding: 2rem 1rem;
+}
+
+.what--block__heading {
+  margin-top: 0%;
+  text-align: center;
+  padding: 2rem 0 0;
+}
+.what--elements {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.what--elements .fas {
+  font-size: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .what--block {
+    display: flex;
+    flex-direction: row;
+    height: 20vh;
+    justify-content: space-evenly;
+    padding-top: 0%;
+  }
+  .what--elements {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+  .what--block__heading {
+    margin: 0;
+  }
+}
+/* Who */
+
+.who--block {
+  background: var(--color-primary);
+  color: white;
+  padding: 3rem;
+}
+.who--image {
+  display: none;
+}
+.who .list {
+  color: #fff;
+  padding: 0;
+  margin: 0;
+}
+.who-list {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(92, 92, 92, 0.2);
+}
+@media screen and (min-width: 768px) {
+  .who {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .who--image {
+    display: inherit;
+    background-image: url(/img/people.jpg);
+    background-size: cover;
+    background-position-y: center;
+  }
+}
+/* contact */
+.contact--map {
+  display: none;
+}
+.contact--form {
+  background: var(--color-secondary);
+  color: #fff;
+  padding: 3rem;
+}
+.contact--content {
+  padding: 0rem 1rem;
+}
+
+.contact--inputs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.contact-inputs textarea {
+  height: 10rem;
+}
+#name,
+#tel,
+#email,
+#message {
+  padding: 1rem 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--color-primary);
+}
+.contact--inputs label {
+  font-size: 1.5rem;
+  padding: 1rem 0 0.3rem;
+}
+.contact--form .btn {
+  margin: 2rem 0;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .contact {
+    display: grid;
+    grid-template-columns: 35% 65%;
+  }
+
+  .contact--map {
+    display: inherit;
+    width: 100%;
+    height: auto;
+    flex: 50%;
+  }
+  .contact--map iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Footer */
+
+.footer {
+  background: var(--color-primary);
+  color: #f3f3f3;
+  font-size: 2rem;
+  padding: 1rem 5rem;
+  text-align: center;
+}
+
+/* clients */
+
+.clients {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.clients img {
+  width: 6rem;
+  height: 6rem;
+}
+.client--logos {
+  display: flex;
+  flex-direction: rows;
+  gap: 1rem;
+  justify-content: center;
+  width: 100%;
+  padding: 3rem 0;
+}
+@media screen and (min-width: 768px) {
+  .clients h2 {
+    margin-top: 2rem;
+    font-size: 4rem;
+  }
+  .clients img {
+    width: 15rem;
+    height: 15rem;
+  }
+  .client--logos {
+    gap: 5rem;
+    padding: 5rem 0;
+  }
+}
